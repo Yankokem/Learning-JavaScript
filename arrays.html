@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .first, .second, .third{
+            border: 2px solid red;
+            padding: 10px;
+            margin: 20px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="first">
+        <h1>Arrays using const</h1>
+        <p>using array hehe practice</p>
+        <p id="wow"></p>
+    </div>
+
+    <div class="second">
+        <p>click the button bellow to show objects inside an array</p>
+        <button type="button" onclick="objectz()">SHOW</button>
+    <p id="showes"></p>
+    </div>
+
+    <div class="third">
+        <p>using operator += to concatenate strings</p>
+        <p>text1 = maayong</p>
+        <p>text1 += bonethugs</p>
+        <p id="morning"></p>
+        <button type="button" onclick="persona()">Connect!</button>
+        
+    </div>
+    
+    
+
+    <script>
+        const cars = ["mitsubuhi", "toyota", "elonmusk"];
+
+        //change the element 0
+        cars[0] = "hyundai";
+
+        //adds a new element to the last
+        cars.push("honda");
+
+        //displayz
+        document.getElementById('wow').innerHTML = cars;
+
+        function objectz() {
+            const human = {sex:'male', height:'175cm', weight:'65kg'};
+
+            //change property
+            human.sex = 'female'
+
+            //add new propery
+            human.skintone = 'black';
+
+            //IM USING BACKTICKS NOT SINGLE QUOTES!
+            document.getElementById('showes').innerHTML = `
+            Sex: ${human.sex}<br>
+            Height: ${human.height}<br>
+            Weight: ${human.weight}<br>
+            Skintone: ${human.skintone}`;
+
+        }
+
+        function persona() {
+            let text1 = 'maayong ';
+            text1 += 'bonethugs';
+            document.getElementById('morning').innerHTML = text1;
+
+        }
+
+
+
+
+
+    </script>
+</body>
+</html>

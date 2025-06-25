@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>innerHTML</h1>
+    <p>Changing the innerHTML property of an HTML element is the most common way to display data in HTML.</p>
+    <p id="element"></p>
+    <script>document.getElementById('element').innerHTML = 'this text was constructed using innerhtml'</script>
+
+
+    <h1>innerText</h1>
+    <p>Use innerText property to change the inner text of the HTML element</p>
+    <p id="element1"></p>
+    <script>document.getElementById('element1').innerText = 'this text was constructed using innerText'</script>
+
+    <h1>document.write()</h1>
+    <p>basically reloads all content and only shows whats inside the doc.write (yabai)</p>
+    <button type="button" onclick="docum()">try</button>
+    <script>
+        function docum() {
+            document.write('tee hee');
+        }
+    </script>
+
+    <h1>window.alert()</h1>
+    <p>display alert message</p>
+    <p>you can also ditch the "window." and just use alert only</p>
+    <button type="button" onclick="alerty()">Alert Message</button>
+    <script>
+        function alerty() {
+            window.alert('Broke nigga alert! Broke nigga alert! Broke nigga alert! Broke nigga alert!')
+        }
+    </script>
+
+    <h1>console.log()</h1>
+    <p>displays message in console for debugging purpose</p>
+    <button type="button" onclick="console.log('hello')" >try</button>
+
+    <script></script>
+
+</body>
+</html>

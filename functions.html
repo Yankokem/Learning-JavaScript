@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function change() {
+            document.getElementById('element').innerHTML = "there damn";
+        }
+    </script>
+</head>
+<body>
+    <h1>JS No.1</h1>
+    <p>script tags can be place either head or body or even external</p>
+    <p id="element1">This parapgraph will change!</p>
+    <button type="button" onclick="change()">Change</button>
+
+    <h1>JS No.2</h1>
+    <p>using external js file (function.js)</p>
+    <p id="element2">This parapgraph will change!</p>
+    <script src="functions.js"></script>
+    <button type="button" onclick="myfunction()">Change</button>
+</body>
+</html>

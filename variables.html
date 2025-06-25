@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Variables</h1>
+    <p>Variables are Containers for Storing Data
+JavaScript Variables can be declared in 4 ways:</p>
+<ul>
+    <li>Automatically</li>
+    <li>var</li>
+    <li>let</li>
+    <li>const</li>
+</ul>
+    <p>i added 2 numbers declared as variables</p>
+    <p>17 + 35 =</p>
+    <p id="numba"></p>
+    <button type="button" onclick="addition()">Try</button>
+    <p>(An expression is a combination of values, variables, and operators, which computes to a value: x * 10)</p>
+    <script>
+        function addition() {
+            var x = 17;
+            var y = 35;
+            var z = x + y
+            document.getElementById('numba').innerHTML = (z);
+        }
+    
+
+    </script>
+</body>
+</html>

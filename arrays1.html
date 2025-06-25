@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .item{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .buttons{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .buttons button{
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="item">
+        <h1>Arrays</h1>
+        <h3>Result:</h3>
+        <p id="result"></p>
+        <p id="exp"></p>
+
+        <div class="buttons">
+        <button onclick="pushy()" type="button">Push Function</button>
+        <button type="button" onclick="poppy()">Pop Function</button>
+        <button type="button" onclick="shifty()">Shift Function</button>
+        <button type="button" onclick="unshifty()">Unshift Function</button>
+        <button type="button" onclick="slicey()">Slice Function</button>
+        <button type="button" onclick="splicey()">Splice Function</button>
+        <button type="button" onclick="resety()">Reset</button>
+        </div>
+    </div>
+    
+    <script>
+        const origArray = [1, 2, 3, 4, 5];
+        let myArray = [...origArray];
+
+        document.getElementById('result').innerHTML = myArray;
+        
+        function resety() {
+            myArray = [...origArray];
+            document.getElementById('result').innerHTML = myArray;
+            document.getElementById('result').innerHTML
+        }
+
+        function pushy() {
+            myArray.push(7);
+            myArray.push(8);
+            myArray.push(9);
+            myArray.push(10);
+            document.getElementById('result').innerHTML = myArray;
+        }
+
+        function poppy() {
+            myArray.pop(4);
+            myArray.pop(3);
+            myArray.pop(2);
+            document.getElementById('result').innerHTML = myArray;
+        }
+
+        function shifty() {
+            myArray.shift(0);
+            myArray.shift(0);
+            myArray.shift(0);
+            document.getElementById('result').innerHTML = myArray;
+        }
+
+        function unshifty() {
+            myArray.unshift(0);
+            myArray.unshift(-1);
+            myArray.unshift(-2);
+            document.getElementById('result').innerHTML = myArray;
+        }
+
+        function slicey() {
+            let arraySliced = myArray.slice(2, 3);
+            document.getElementById('result').innerHTML = arraySliced;
+        }
+
+        function splicey() {
+            let arraySpliced = myArray.splice(2, 3);
+            document.getElementById('result').innerHTML = arraySpliced
+        }
+
+    </script>
+</body>
+</html>
