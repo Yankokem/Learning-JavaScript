@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h2>Simple Greeting App</h2>
+            <label for="">Name:</label>
+            <input type="text" id="idName" placeholder="Enter your name">
+            <button type="button" onclick="greeting()">Enter</button>
+        </div>
+
+        <div class="container">
+            <div class="agee">
+                <div class="left">
+                    <h2>Age Checker</h2>
+                    <label for="">Age:</label>
+                    <input type="text" id="idAge" placeholder="Enter your age">
+                    <button type="button" onclick="checker()">Enter</button>
+                </div>
+                <div class="right">
+                    <h2>Result</h2>
+                    <p id="res1" ></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="calc">
+
+                <div class="left">
+                    <h2>Simple Calculator</h2>
+                    <label for="">1st Number:</label>
+                    <input type="text" id="firstNum"> <br><br>
+                    <label for="">2nd Number:</label>
+                    <input type="text" id="secNum"> <br><br>
+                    <button type="button" onclick="add()"> + </button>
+                    <button type="button" onclick="sub()"> - </button>
+                    <button type="button" onclick="mult()"> x </button>
+                    <button type="button" onclick="div()"> / </button> <br><br>
+                    <button type="button" onclick="reset()" style="padding: 0 20px;">Reset</button>
+                </div>
+                <div class="right">
+                    <h2 style="margin-top: 3px;">Result</h2>
+                    <p id="equals"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <form>
+                <h2>Todo List</h2>
+                <label for="">Enter new task:</label>
+                <input type="text" id="task-input" name="task-input">
+                <button>Add Task</button>
+            </form>
+            <ul id="task-list"></ul>
+        </div>
+
+        <div class="container">
+            <form class="form1">
+                <h2>Simple Playlist maker</h2>
+                <label for="">Song Name:</label>
+                <input type="text" id="title-input" name="title-input">
+                <label for="">Artist:</label>
+                <input type="text" id="artist-input" name="artist-input">
+                <button>Add Music</button>
+            </form>
+            <ul id="music-list"></ul>
+        </div>
+
+        <div class="container">
+            <form class="form2">
+                <div class="left">
+                    <h2>Mad Libs Game</h2>
+                    <label>Noun:</label>
+                    <input type="text" id="noun"> <br><br>
+                    <label>Verb:</label>
+                    <input type="text" id="verb"> <br><br>
+                    <label>adjective:</label>
+                    <input type="text" id="adjective"> <br><br>
+                    <button>Enter</button>
+                </div>
+                
+                <div class="right">
+                    <h2>Result</h2> 
+                    <p>One day, a(n) <span>1.adjective</span> explorer named <span>2.roper noun</span> woke up to find a noun sitting on their front porch.
+                        Without thinking, they <span>3.verb (past tense)</span> it and shouted, <span>4.“exclamation”</span> 
+                        Suddenly, a(n) <span>5.adverb</span> dancing llama appeared, juggling <span>6.plural noun</span> while singing a song about <span>7.noun</span>.
+                        It was the most <span>8.emotion</span> morning ever.
+                    </p>
+                    <p id="madlib-list"></p>
+                    <p></p>
+            </form>
+
+            
+            </div>
+        </div>
+        
+
+
+
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>

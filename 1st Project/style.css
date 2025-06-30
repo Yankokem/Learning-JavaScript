@@ -1,0 +1,31 @@
+.main{
+    border: 2px solid rgb(0, 0, 0);
+    padding: 10px;
+    display: flex;
+}
+
+.container{
+    border: 2px solid rgb(0, 0, 0);
+    flex: 1;
+    padding: 10px;
+    margin: 5px;
+}
+
+.main button {
+        padding: 5px 10px;
+    }
+
+.ress{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.error{
+    color: red;
+}
+
+
+input[type="text"]{
+    width: 200px;
+}
+

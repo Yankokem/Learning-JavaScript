@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <h1>User Input Exercise</h1>
+            <label for="">Full Name:</label> <br>
+            <input type="text" id="idName"> <br><br>
+
+            <label for="">Age:</label> <br>
+            <input type="text" id="idAge"> <br><br>
+
+            <label for="">Gender:</label>
+            <input type="radio" name="gender" value="Male" id="maleGender">Male
+            <input type="radio" name="gender" value="Female" id="femaleGender">Female <br><br>
+
+            <label for="">Marital Status:</label>
+            <select id="idMS">
+                <option value="Single">Single</option>
+                <option value="Married">Married</option>
+                <option value="Widowed">Widow</option>
+                <option value="Divorced">Divorced</option>
+                <option value="Remarried">Remarried</option>
+            </select><br><br>
+
+            <button type="button" id="mySubmit">Submit</button>
+            <button type="button" onclick="resett()">Reset</button>
+        </div>
+
+        <div class="container">
+            <h1>Results</h1>
+            <h3 class="error" id="err"></h3>
+            <h3>Name: <span id="res1" class="ress"></span></h3>
+            <h3>Age: <span id="res2" class="ress"></span></h3>
+            <h3>Gender: <span id="res3" class="ress"></span></h3>
+            <h3>Marital Status: <span id="res4" class="ress"></span></h3>
+        </div>
+        
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
