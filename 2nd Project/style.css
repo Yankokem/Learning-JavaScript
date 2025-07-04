@@ -11,7 +11,6 @@ main{
 
 .container {
     border: 2px solid;
-    
     padding: 10px;
 }
 
@@ -45,3 +44,34 @@ main{
     text-decoration:underline;
 }
 
+fieldset{
+    margin: 20px 5px;
+}
+
+input[readonly] {
+    border: 2px solid red;
+}
+
+input[readonly]:focus{
+    border: 2px solid red;
+    outline: none;
+    background-color: #ffe7e7;
+}
+
+/* DARK MODE TOGGLE */
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #222222;
+}
+
+.dark-mode {
+    --bg-color: #1e1e1e;
+    --text-color: #f1f1f1;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}

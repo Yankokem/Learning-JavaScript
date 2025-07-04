@@ -127,16 +127,105 @@ form1.addEventListener('submit', (event) => {
 
 //MAD LIBS GAME
 
-const form2 = document.querySelector('.form2');
-const madlibList = document.querySelector('#madlib-list');
+function madlib() {
+    let adjective = document.getElementById('adjective').value;
+    let properNoun = document.getElementById('properNoun').value;
+    let verb = document.getElementById('verb').value;
+    let exclamation = document.getElementById('exclamation').value;
+    let adverb = document.getElementById('adverb').value;
+    let pluralNoun = document.getElementById('pluralNoun').value;
+    let noun = document.getElementById('noun').value;
+    let emotion = document.getElementById('emotion').value;
 
-let noun = document.getElementById('#noun').value;
-let verb = document.getElementById('#verb').value;
-let adjective = document.getElementById('#adjective').value;
-
-
-function madlib(combine) {
-    const result = document.createElement('p');
-    result.innerHTML = ``;
+    document.getElementById('demo').innerHTML =
+    `One day, a(n) ${adjective} explorer named <span>${properNoun}</span>
+    woke up to find a noun sitting on their front porch.
+    Without thinking, they <span>${verb}</span> it and shouted,
+    <span>"${exclamation}"</span>. Suddenly, a(n) <span>${adverb}</span> dancing llama appeared,
+    juggling <span>${pluralNoun}</span> while singing a song about <span>${noun}</span> .
+    It was the most <span>${emotion}</span> morning ever.`;
 }
 
+//UNIT CONVERSION
+
+const select1 = document.getElementById('select1');
+const celcius = document.getElementById('celcius');
+const fahrenheit = document.getElementById('fahrenheit');
+
+select1.addEventListener('change', (event) => {
+    selectedValue = select1.value;
+    if (selectedValue === 'fahrenheit-opt') {
+        fahrenheit.readOnly = true;
+        celcius.readOnly = false;
+        fahrenheit.value = '';
+        celcius.value = '';
+    } else if (selectedValue === 'celcius-opt') {
+        celcius.readOnly = true;
+        fahrenheit.readOnly = false;
+        fahrenheit.value = '';
+        celcius.value = '';
+    }
+});
+
+function temp() {
+    const celcius = document.getElementById('celcius').value;
+    const fahrenheit = document.getElementById('fahrenheit').value;
+
+    if(!fahrenheit) {
+        if(celcius) {
+            document.getElementById('fahrenheit').value = (celcius * 1.8) + 32;
+        }
+    } else if (!celcius) {
+        if(fahrenheit) {
+            document.getElementById('celcius').value = (fahrenheit - 32) / 1.8;
+        }
+    }
+}
+
+select2.addEventListener('change', (event) =>{
+    selectedValue1 = select2.value;
+    if(selectedValue1 === 'meter-opt') {
+        document.getElementById('meter').readOnly = true;
+        document.getElementById('kilometer').readOnly = false;
+        document.getElementById('meter').value = '';
+        document.getElementById('kilometer').value = '';
+    } else if (selectedValue1 === 'kilometer-opt') {
+        document.getElementById('kilometer').readOnly = true;
+        document.getElementById('meter').readOnly = false;
+        document.getElementById('kilometer').value = '';
+        document.getElementById('meter').value = '';
+    }
+});
+
+function weight() {
+const meter = document.getElementById('meter').value;
+const kilometer = document.getElementById('kilometer').value;
+
+    if(!meter) {
+        if(kilometer) {
+            document.getElementById('meter').value = kilometer * 1000;
+        }
+    } else if(!kilometer) {
+        if(meter) {
+            document.getElementById('kilometer').value = meter / 1000;
+        }
+    }
+}
+
+// DARK MODE TOGGLE
+
+const toggle = document.getElementById('toggle');
+const body = document.body;
+
+function updateButtonText() {
+    toggle.textContent = body.classList.contains('dark-mode')
+    ? 'Light Mode'
+    : 'Dark Mode';
+}
+
+updateButtonText();
+
+toggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    updateButtonText();
+});

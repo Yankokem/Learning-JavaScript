@@ -78,34 +78,77 @@
             <form class="form2">
                 <div class="left">
                     <h2>Mad Libs Game</h2>
-                    <label>Noun:</label>
-                    <input type="text" id="noun"> <br><br>
-                    <label>Verb:</label>
-                    <input type="text" id="verb"> <br><br>
-                    <label>adjective:</label>
+                    <label>1.adjective:</label> <br>
                     <input type="text" id="adjective"> <br><br>
-                    <button>Enter</button>
+                    <label>2.proper noun:</label> <br>
+                    <input type="text" id="properNoun"> <br><br>
+                    <label>3.verb(past tense):</label> <br>
+                    <input type="text" id="verb"> <br><br>
+                    <label>4.“exclamation”:</label> <br>
+                    <input type="text" id="exclamation"> <br><br>
+                    <label>5.adverb:</label> <br>
+                    <input type="text" id="adverb"> <br><br>
+                    <label>6.plural noun:</label> <br>
+                    <input type="text" id="pluralNoun"> <br><br>
+                    <label>7.noun:</label> <br>
+                    <input type="text" id="noun"> <br><br>
+                    <label>8.emotion:</label> <br>
+                    <input type="text" id="emotion"> <br><br>
+                    <button type="button" onclick="madlib()" style="padding: 0 30px;">Enter</button>
                 </div>
                 
                 <div class="right">
-                    <h2>Result</h2> 
-                    <p>One day, a(n) <span>1.adjective</span> explorer named <span>2.roper noun</span> woke up to find a noun sitting on their front porch.
+                    <h2>Result</h2>
+                    <p id="demo" >One day, a(n) <span>1.adjective</span> explorer named <span>2.proper noun</span> woke up to find a noun sitting on their front porch.
                         Without thinking, they <span>3.verb (past tense)</span> it and shouted, <span>4.“exclamation”</span> 
                         Suddenly, a(n) <span>5.adverb</span> dancing llama appeared, juggling <span>6.plural noun</span> while singing a song about <span>7.noun</span>.
                         It was the most <span>8.emotion</span> morning ever.
                     </p>
-                    <p id="madlib-list"></p>
-                    <p></p>
+                </div>
             </form>
-
-            
-            </div>
         </div>
-        
 
+        <div class="container">
+            <h2>Unit Conversion</h2>
+            <fieldset>
+                <legend>Temperature Conversion
+                    <select id="select1">
+                        <option value="fahrenheit-opt">Fahrenheit</option>
+                        <option value="celcius-opt">Celcius</option>
+                    </select>
+                </legend>
+
+                <label>Celsius:</label>
+                <input type="text" id="celcius">
+                <label>Fahrenheit</label>
+                <input type="text" id="fahrenheit"> <br><br>
+                <button type="button" onclick="temp()">Convert</button>
+            </fieldset>
+
+            <fieldset>
+                <legend>Weight Conversion
+                    <select id="select2">
+                        <option value="meter-opt">Meter</option>
+                        <option value="kilometer-opt">Kilometer</option>
+                    </select>
+                </legend>
+
+                <label>Meter:</label>
+                <input type="text" id="meter">
+                <label>Kilometer:</label>
+                <input type="text" id="kilometer"> <br><br>
+                <button type="button" onclick="weight()">Convert</button>
+            </fieldset>
+        </div>
+
+        <div class="container">
+            <h2>Dark Mode Toggle</h2>
+            <button id="toggle" style="padding: 5px 10px;">Dark Mode</button>
+        </div>
 
 
     </main>
+    
 
     <script src="index.js"></script>
 </body>
