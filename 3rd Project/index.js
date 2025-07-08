@@ -124,15 +124,6 @@ equals.addEventListener('click', function () {
     }
 });
 
-equals.addEventListener('click', function () {
-    if (screen.value !== '') {
-        try {
-        screen.value = eval(screen.value);
-        } catch (error) {
-        screen.value = 'Error';
-        }
-    }
-});
 
 
 
