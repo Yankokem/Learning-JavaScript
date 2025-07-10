@@ -1,0 +1,46 @@
+form{
+    display: flex;
+    justify-content: center;
+    border: 2px solid purple;
+    border-radius: 15px;
+    width: fit-content;
+    margin-inline: auto;
+    gap: 20px;
+    padding: 10px;
+}
+
+.create-btn{
+    margin: 8px 0px 0px 0px;
+}
+
+main{
+    display: flex;
+    justify-content: center
+}
+
+.content-container{
+    border: 2px solid purple;
+    display: flex;
+    justify-content: center;
+    width: 800px;
+    height: auto;
+    margin: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item{
+    border: 2px solid purple;
+    border-radius: 15px;
+    width: 600px;
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+    
+}
+
+.item button{
+    display: flex;
+    justify-self: flex-end;
+    padding: 5px 20px;
+}
